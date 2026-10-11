@@ -3,112 +3,108 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Practical engineering calculators and project tools for students, makers, and robotics teams.">
-<title>BuildLab Engineering — Tools for people who build</title>
+<meta name="theme-color" content="#101827">
+<title>BuildLab Engineering | RC Engineering Demo</title>
 <style>
-:root{--bg:#0b1020;--panel:#121a2d;--panel2:#18233a;--text:#eef3ff;--muted:#a9b7d0;--line:#2a3854;--accent:#7ce0c3;--accent2:#a6b8ff;--danger:#ffcf8a}
-*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#0b1020,#10182b 55%,#0b1020);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-a{color:var(--accent)}.wrap{max-width:1050px;margin:auto;padding:0 20px}
-header{padding:22px 0;border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-weight:800;letter-spacing:.2px}.brand span{color:var(--accent)}.nav a{text-decoration:none;color:var(--muted);font-size:14px}
-.hero{padding:64px 0 42px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.eyebrow{color:var(--accent);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1.7px}h1{font-size:clamp(36px,6vw,58px);line-height:1.04;letter-spacing:-1.8px;margin:12px 0 18px}p{color:var(--muted)}.hero p{font-size:18px;max-width:610px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{border:0;border-radius:10px;padding:12px 16px;font-weight:750;text-decoration:none;display:inline-block;cursor:pointer}.primary{background:var(--accent);color:#082019}.secondary{border:1px solid var(--line);color:var(--text);background:var(--panel)}
-.preview{background:linear-gradient(145deg,#192943,#10182a);border:1px solid var(--line);padding:22px;border-radius:20px;box-shadow:0 20px 60px #0003}.preview .screen{background:#0a1120;border:1px solid var(--line);border-radius:12px;padding:16px}.metric{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding:10px 0}.metric:last-child{border:0}.metric span{color:var(--muted)}.metric strong{color:var(--accent)}
-section{padding:32px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:18px}h2{font-size:28px;letter-spacing:-.6px;margin:0}h3{margin:0 0 8px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}.tag{display:inline-block;color:var(--accent);font-size:12px;font-weight:800;margin-bottom:10px}.card p{font-size:14px}.calc-layout{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{margin:13px 0}.field label{display:block;color:var(--muted);font-size:14px;margin-bottom:6px}.field input{width:100%;padding:11px 12px;border-radius:9px;border:1px solid var(--line);background:#0a1120;color:var(--text);font:inherit}.result{background:#0a1120;border:1px solid var(--line);border-radius:12px;padding:18px;margin-top:12px}.big{font-size:34px;font-weight:850;color:var(--accent);letter-spacing:-1px}.note{font-size:13px;color:var(--muted)}.callout{border:1px solid #4a634f;background:#14251f;border-radius:14px;padding:18px}.callout p{margin-bottom:0}.form-row{display:flex;gap:10px;flex-wrap:wrap}.form-row input{flex:1;min-width:210px;padding:12px;border-radius:9px;border:1px solid var(--line);background:#0a1120;color:var(--text);font:inherit}.small{font-size:12px;color:var(--muted)}footer{border-top:1px solid var(--line);padding:24px 0 36px;margin-top:28px;color:var(--muted);font-size:13px}
-@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:42px}.grid{grid-template-columns:1fr}.calc-layout{grid-template-columns:1fr}.section-head{display:block}.preview{max-width:520px}}
+:root{--bg:#0b1120;--panel:#121c2e;--panel2:#17243a;--text:#edf3ff;--muted:#aab8cf;--line:#2a3a53;--accent:#62e6b5;--accent2:#8cb8ff;--warn:#ffd27d}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#172b46 0,#0b1120 42%);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--accent2)}.wrap{max-width:980px;margin:auto;padding:20px}.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 0 22px}.brand{font-weight:850;letter-spacing:.2px}.pill{border:1px solid var(--line);border-radius:999px;padding:6px 11px;color:var(--muted);font-size:.85rem}
+.hero{padding:25px 0 22px}.eyebrow{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:.78rem}h1{font-size:clamp(2rem,7vw,3.6rem);line-height:1.08;letter-spacing:-1.4px;margin:12px 0}h2{font-size:1.35rem;margin:0 0 10px}p{margin:8px 0;color:var(--muted)}.hero p{max-width:690px;font-size:1.08rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:15px;margin:18px 0}.card{background:linear-gradient(160deg,var(--panel),#0f1929);border:1px solid var(--line);border-radius:18px;padding:19px;box-shadow:0 12px 30px #0002}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px}.field label{display:block;color:var(--muted);font-size:.88rem;margin-bottom:5px}.field input,.field select{width:100%;background:#091321;color:var(--text);border:1px solid #344863;border-radius:10px;padding:12px;font:inherit;min-width:0}.field input:focus,.field select:focus{outline:2px solid var(--accent2);outline-offset:1px}.btn{display:inline-block;background:var(--accent);color:#06251b;border:0;border-radius:11px;padding:11px 15px;font-weight:850;text-decoration:none;cursor:pointer;font:inherit;font-weight:800}.btn.secondary{background:var(--panel2);border:1px solid var(--line);color:var(--text)}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.result{background:#071b1b;border:1px solid #236b5c;border-radius:14px;padding:15px;margin-top:15px}.big{font-size:clamp(1.8rem,7vw,2.6rem);font-weight:900;letter-spacing:-1px;color:var(--accent)}.small{font-size:.86rem}.note{border-left:3px solid var(--warn);padding:8px 12px;background:#332a1a55;border-radius:0 9px 9px 0;color:#ffe5b3}.feature{padding:10px 0;border-bottom:1px solid var(--line)}.feature:last-child{border:0}.tag{display:inline-block;border:1px solid var(--line);border-radius:8px;padding:3px 8px;color:var(--muted);font-size:.8rem;margin:2px 3px 2px 0}footer{padding:28px 0;color:var(--muted);font-size:.85rem}.muted{color:var(--muted)}.section{margin-top:28px}
+@media(max-width:480px){.wrap{padding:15px}.card{padding:15px}.nav{align-items:flex-start}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><div class="brand">BuildLab <span>Engineering</span></div><a href="#calculator">Try the free calculator ↓</a></div></header>
-<main>
 <div class="wrap">
-<section class="hero">
-  <div>
-    <div class="eyebrow">Engineering tools for students & makers</div>
-    <h1>Build smarter.<br><span style="color:var(--accent)">Test your ideas.</span></h1>
-    <p>Practical calculators and project tools for RC cars, robotics, and student engineering projects. Start with a free tool; tell us what you want us to build next.</p>
-    <div class="actions"><a class="btn primary" href="#calculator">Try the free calculator</a><a class="btn secondary" href="#roadmap">See what's coming</a></div>
-    <p class="small">Independent student project. Not affiliated with any hackathon or university unless explicitly announced.</p>
-  </div>
-  <div class="preview">
-    <div class="eyebrow">Tool preview</div><h3 style="margin-top:8px">RC Speed Estimator</h3>
-    <p style="font-size:14px">Estimate theoretical speed from motor RPM, gearing, and wheel size.</p>
-    <div class="screen">
-      <div class="metric"><span>Motor speed</span><strong>12,000 RPM</strong></div>
-      <div class="metric"><span>Gear ratio</span><strong>3.0 : 1</strong></div>
-      <div class="metric"><span>Wheel diameter</span><strong>65 mm</strong></div>
-      <div class="metric"><span>Estimated speed (85% factor)</span><strong>41.6 km/h</strong></div>
-    </div>
-    <p class="small">Illustrative example only. Real speed is lower or varies due to load, slip, voltage, and drivetrain losses.</p>
-  </div>
-</section>
+  <nav class="nav"><div class="brand">⚙ BuildLab Engineering</div><span class="pill">Free RC engineering demo</span></nav>
+  <header class="hero">
+    <div class="eyebrow">Design • Calculate • Build</div>
+    <h1>Make your RC build<br>less guesswork.</h1>
+    <p>Estimate theoretical RC car speed from motor RPM, gearing, wheel size and drivetrain efficiency. Then use the planning checklist to turn the estimate into a sensible test plan.</p>
+    <div class="actions"><a class="btn" href="#calculator">Open calculator ↓</a><a class="btn secondary" href="#toolkit">Explore the toolkit</a></div>
+  </header>
 
-<section id="calculator">
-  <div class="section-head"><div><div class="eyebrow">Free tool · Version 0.1</div><h2>RC gear & speed calculator</h2></div><p class="note">Runs in your browser; no upload required.</p></div>
-  <div class="card calc-layout">
-    <div>
-      <div class="field"><label for="rpm">Motor speed (RPM)</label><input id="rpm" type="number" min="1" step="1" value="12000"></div>
-      <div class="field"><label for="ratio">Gear reduction ratio (motor turns : wheel turns)</label><input id="ratio" type="number" min="0.01" step="0.1" value="3"></div>
-      <div class="field"><label for="diameter">Wheel diameter (mm)</label><input id="diameter" type="number" min="1" step="1" value="65"></div>
-      <div class="field"><label for="efficiency">Estimated drivetrain factor (%)</label><input id="efficiency" type="number" min="1" max="100" step="1" value="85"></div>
-      <button class="btn primary" id="calculate" type="button">Calculate speed</button>
+  <section id="calculator" class="card">
+    <h2>RC Speed & Gear Calculator</h2>
+    <p>Enter your build values. Results update automatically. Use consistent units shown in each field.</p>
+    <div class="fields">
+      <div class="field"><label for="rpm">Motor speed (RPM)</label><input id="rpm" type="number" min="0" max="1000000" step="100" value="6000"></div>
+      <div class="field"><label for="ratio">Reduction ratio (motor:wheel)</label><input id="ratio" type="number" min="0.01" max="10000" step="0.1" value="3.0"></div>
+      <div class="field"><label for="diam">Wheel diameter (mm)</label><input id="diam" type="number" min="1" max="1000" step="1" value="65"></div>
+      <div class="field"><label for="eff">Drivetrain efficiency (%)</label><input id="eff" type="number" min="1" max="100" step="1" value="85"></div>
     </div>
-    <div>
-      <div class="result" aria-live="polite">
-        <div class="note">Theoretical speed adjusted by your efficiency estimate</div>
-        <div class="big" id="speed">49.0 km/h</div>
-        <div class="metric"><span>Wheel RPM</span><strong id="wheelrpm">4,080</strong></div>
-        <div class="metric"><span>Wheel circumference</span><strong id="circumference">204.2 mm</strong></div>
-        <div class="metric"><span>Speed before adjustment</span><strong id="rawspeed">57.8 km/h</strong></div>
+    <div class="result" aria-live="polite">
+      <div class="small muted">Estimated speed (idealized)</div><div class="big" id="speed">— km/h</div>
+      <div id="mph" class="muted">— mph</div>
+      <div class="grid">
+        <div><div class="small muted">Wheel RPM estimate</div><strong id="wheelrpm">—</strong></div>
+        <div><div class="small muted">Wheel circumference</div><strong id="circ">— mm</strong></div>
       </div>
-      <p class="note">Formula: wheel RPM = motor RPM ÷ reduction ratio. Speed = wheel RPM × wheel circumference. The efficiency factor is a rough user assumption, not a physical prediction of all drivetrain losses.</p>
     </div>
-  </div>
-</section>
+    <div class="note small" style="margin-top:14px">This is a simplified estimate, not a guarantee of real road speed. Loaded motor RPM, tire deformation, traction, voltage sag, temperature and aerodynamic drag can change the result. The efficiency factor is a rough model and should not be treated as a measured physical correction.</div>
+    <div class="actions"><button class="btn" id="downloadCsv" type="button">Download results CSV</button><button class="btn secondary" id="reset" type="button">Reset example</button></div>
+  </section>
 
-<section id="roadmap">
-  <div class="section-head"><div><div class="eyebrow">Product roadmap</div><h2>Tools we're exploring</h2></div></div>
-  <div class="grid">
-    <div class="card"><div class="tag">FREE / PLANNED</div><h3>Motor & Battery Toolkit</h3><p>Estimate power, energy, current draw, and runtime from stated assumptions. Includes examples and units.</p></div>
-    <div class="card"><div class="tag">IN DEVELOPMENT</div><h3>Telemetry Analyzer</h3><p>Plot robot or RC test logs from CSV files, compare runs, and export simple charts and summary reports.</p></div>
-    <div class="card"><div class="tag">COMING LATER</div><h3>Design & Simulation Packs</h3><p>Original educational project files, CAD resources, and guided simulation examples, with limitations clearly documented.</p></div>
-  </div>
-</section>
+  <section class="section grid">
+    <div class="card"><h2>How it works</h2>
+      <div class="feature"><strong>1. Wheel RPM</strong><p>Motor RPM ÷ reduction ratio.</p></div>
+      <div class="feature"><strong>2. Distance per revolution</strong><p>Wheel circumference = π × wheel diameter.</p></div>
+      <div class="feature"><strong>3. Speed</strong><p>Convert mm/min to km/h, then apply the chosen rough efficiency factor.</p></div>
+    </div>
+    <div class="card"><h2>Before you build</h2>
+      <div class="feature">☑ Confirm gear ratio from tooth counts.</div>
+      <div class="feature">☑ Check motor, ESC and battery voltage ratings.</div>
+      <div class="feature">☑ Check current draw and motor temperature under load.</div>
+      <div class="feature">☑ Test in a clear, controlled area and secure the vehicle.</div>
+    </div>
+  </section>
 
-<section id="feedback">
-  <div class="callout">
-    <div class="eyebrow">Help shape the next tool</div><h2 style="margin-top:5px">What are you building?</h2>
-    <p>Tell us what kind of project you're working on and what tool would save you time. This demo form opens an email draft; it does not store your information on a server.</p>
-    <form id="feedbackForm">
-      <div class="form-row"><input id="project" placeholder="Project type (e.g. RC car, robot)" required><input id="need" placeholder="What tool do you need?" required><button class="btn primary" type="submit">Send feedback</button></div>
-    </form>
-    <p class="small"</p>
-  </div>
-</section>
+  <section id="toolkit" class="section grid">
+    <div class="card"><span class="tag">Starter package</span><h2>RC Engineering Toolkit</h2>
+      <p>A downloadable companion for planning a build: formulas, worked examples, a project worksheet and a pre-test checklist.</p>
+      <p><strong>Current status:</strong> starter edition for feedback. Validate calculations and adapt the worksheet to your own build.</p>
+      <div class="actions"><a class="btn" href="BuildLab_RC_Engineering_Toolkit.pdf" download>Download toolkit PDF</a><a class="btn secondary" href="RC_Build_Worksheet.csv" download>Download worksheet CSV</a></div>
+      <p class="small">When you choose to sell an expanded edition, add your payment link here only after confirming your payment provider can accept and pay out to you in Nepal.</p>
+    </div>
+    <div class="card"><h2>Help improve this demo</h2><p>Tell us what tool would help your next engineering project.</p>
+      <div class="field"><label for="project">What are you building?</label><input id="project" maxlength="120" placeholder="e.g. 1/10 scale RC car"></div>
+      <div class="field" style="margin-top:10px"><label for="request">What calculation or feature do you need?</label><textarea id="request" rows="3" maxlength="1000" style="width:100%;background:#091321;color:var(--text);border:1px solid #344863;border-radius:10px;padding:12px;font:inherit" placeholder="Describe the tool that would help you"></textarea></div>
+      <div class="actions"><button class="btn" id="send" type="button">Prepare feedback email</button></div>
+      <p class="small">This opens your email app with a draft; it does not send or store your message automatically.</p>
+    </div>
+  </section>
+  <footer>© BuildLab Engineering • Educational estimates only. Always follow component manufacturers' ratings and safe testing practices.</footer>
 </div>
-</main>
-<footer><div class="wrap">© <span id="year"></span> BuildLab Engineering · Educational estimates only. Verify calculations and component ratings before building hardware. No safety-critical or flightworthiness claims.</div></footer>
 <script>
-const $ = id => document.getElementById(id);
-function calc(){
- const rpm=Number($('rpm').value), ratio=Number($('ratio').value), d=Number($('diameter').value), eff=Number($('efficiency').value)/100;
- if(!(rpm>0 && ratio>0 && d>0 && eff>0 && eff<=1)){ $('speed').textContent='Check inputs'; return; }
- const wheel=rpm/ratio, circ=Math.PI*d, raw=wheel*circ/1000*60/1000, adjusted=raw*eff;
- $('speed').textContent=adjusted.toFixed(2)+' km/h';
- $('wheelrpm').textContent=wheel.toLocaleString(undefined,{maximumFractionDigits:1});
- $('circumference').textContent=circ.toFixed(1)+' mm';
- $('rawspeed').textContent=raw.toFixed(2)+' km/h';
+const $=id=>document.getElementById(id);
+function val(id){return Number($(id).value)}
+function calculate(){
+ const rpm=val('rpm'), ratio=val('ratio'), diam=val('diam'), eff=val('eff');
+ const valid=[rpm,ratio,diam,eff].every(Number.isFinite)&&rpm>=0&&ratio>0&&diam>0&&eff>0&&eff<=100;
+ if(!valid){$('speed').textContent='Check inputs';$('mph').textContent='RPM must be ≥ 0; ratio and diameter > 0; efficiency 1–100%.';$('wheelrpm').textContent='—';$('circ').textContent='—';return null}
+ const wheelRpm=rpm/ratio, circumference=Math.PI*diam;
+ const idealKmh=wheelRpm*circumference/1e6*60;
+ const estimated=idealKmh*eff/100;
+ $('speed').textContent=estimated.toFixed(2)+' km/h';
+ $('mph').textContent=(estimated/1.609344).toFixed(2)+' mph';
+ $('wheelrpm').textContent=wheelRpm.toFixed(1)+' RPM';
+ $('circ').textContent=circumference.toFixed(1)+' mm';
+ return {rpm,ratio,diam,eff,wheelRpm,circumference,idealKmh,estimated};
 }
-$('calculate').addEventListener('click',calc);
-['rpm','ratio','diameter','efficiency'].forEach(id=>$(id).addEventListener('input',calc));
-$('year').textContent=new Date().getFullYear();
-$('feedbackForm').addEventListener('submit',e=>{
- e.preventDefault();
- const project=$('project').value.trim(), need=$('need').value.trim();
- const subject=encodeURIComponent('BuildLab tool request');
- const body=encodeURIComponent('Project type: '+project+'\nTool needed: '+need+'\n\nSent from the BuildLab Engineering demo page.');
- // Replace this placeholder with your real contact email before publishing.
+['rpm','ratio','diam','eff'].forEach(id=>$(id).addEventListener('input',calculate));
+$('reset').addEventListener('click',()=>{ $('rpm').value=6000;$('ratio').value=3;$('diam').value=65;$('eff').value=85;calculate();});
+$('downloadCsv').addEventListener('click',()=>{
+ const r=calculate(); if(!r)return;
+ const rows=[['BuildLab Engineering - RC speed estimate'],['Motor RPM',r.rpm],['Reduction ratio',r.ratio],['Wheel diameter (mm)',r.diam],['Efficiency estimate (%)',r.eff],['Wheel RPM estimate',r.wheelRpm.toFixed(2)],['Wheel circumference (mm)',r.circumference.toFixed(2)],['Idealized speed before efficiency (km/h)',r.idealKmh.toFixed(3)],['Estimated speed (km/h)',r.estimated.toFixed(3)],['Estimated speed (mph)',(r.estimated/1.609344).toFixed(3)],['Note','Educational estimate; validate with safe real-world testing.']];
+ const csv=rows.map(row=>row.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\r\n');
+ const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}), url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='BuildLab_RC_Speed_Results.csv';a.click();URL.revokeObjectURL(url);
+});
+$('send').addEventListener('click',()=>{
+ const project=$('project').value.trim(), request=$('request').value.trim();
+ const subject=encodeURIComponent('BuildLab Engineering feedback');
+ const body=encodeURIComponent('Hi BuildLab Engineering,\n\nProject: '+(project||'(not specified)')+'\nRequested feature: '+(request||'(not specified)')+'\n\nSent from the BuildLab RC demo.');
  window.location.href='mailto:Mudbharisam@gmail.com?subject='+subject+'&body='+body;
 });
-calc();
+calculate();
 </script>
 </body>
 </html>
