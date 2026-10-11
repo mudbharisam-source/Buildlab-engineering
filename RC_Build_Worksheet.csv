@@ -1,0 +1,26 @@
+Field,Value,Units or notes
+Project name,,
+Vehicle scale,,
+Motor model,,
+Motor rated voltage,,V
+Motor no-load speed,,RPM
+Battery chemistry,,LiPo/NiMH/other
+Battery cell count,,S (if LiPo)
+Battery nominal voltage,,V
+Battery capacity,,mAh
+ESC current rating,,A
+Motor current rating,,A
+Pinion tooth count,,
+Spur gear tooth count,,
+Other reduction stage ratio,,motor revolutions per output revolution
+Wheel diameter,,mm
+Estimated drivetrain efficiency,85,percent (rough assumption)
+Calculated total reduction ratio,,spur teeth / pinion teeth × other reduction stages
+Calculated wheel RPM,,motor RPM / total reduction ratio
+Estimated speed,,km/h (idealized)
+Test location and safety notes,,
+Observed speed,,km/h (measured if available)
+Motor temperature after test,,°C
+ESC temperature after test,,°C
+Battery voltage before/after,,V
+Changes for next test,,
